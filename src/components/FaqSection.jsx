@@ -15,11 +15,11 @@ const FAQS = [
   },
   {
     q: 'Does Rehear replace medical care, audiologists, or hearing aids?',
-    a: 'No. Rehear is a learning and rehearsal tool, not a medical device or treatment. For hearing loss, tinnitus, or auditory processing concerns, follow your audiologist or physician.',
+    a: 'No. Rehear is an educational support tool designed to help capture and revisit spoken instructions. It does not diagnose or treat APD, and it is not a substitute for formal accommodations, medical care, or an audiologist.',
   },
   {
     q: 'Is my account data secure?',
-    a: 'Sign-in uses secure authentication. Choose a strong password and protect your device. In production, always use HTTPS and follow your host’s security guidance.',
+    a: 'Yes. We use industry-standard encryption and secure authentication to ensure your login details, saved instructions, and listening sessions are fully protected and private.',
   },
   {
     q: 'How do I get started?',
@@ -37,10 +37,6 @@ export default function FaqSection() {
         <div className="section-head faq-head">
           <p className="eyebrow subtle">FAQ</p>
           <h2 id="faqs-heading">Questions &amp; answers</h2>
-          <p className="section-text faq-intro">
-            Same themes as the rest of the page: replay, chunks, clarity, and
-            understanding—plus practical notes on safety and privacy.
-          </p>
         </div>
         <div className="faq-list" role="list">
           {FAQS.map((item, i) => {

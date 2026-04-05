@@ -4,6 +4,7 @@ import Hero from './components/Hero.jsx';
 import SectionWaveDivider from './components/graphics/SectionWaveDivider.jsx';
 import Features from './components/Features.jsx';
 import HowItWorks from './components/HowItWorks.jsx';
+import ProblemSection from './components/ProblemSection.jsx';
 import FaqSection from './components/FaqSection.jsx';
 import AuthSection from './components/AuthSection.jsx';
 import Footer from './components/Footer.jsx';
@@ -25,6 +26,7 @@ export default function App() {
       <main id="main">
         <Hero />
         <SectionWaveDivider />
+        <ProblemSection />
         <Features />
         <HowItWorks />
         <FaqSection />

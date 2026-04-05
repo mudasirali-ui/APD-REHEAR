@@ -6,7 +6,7 @@ const NAV = [
   { href: '#features', label: 'Features' },
   { href: '#how-it-works', label: 'How It Works' },
   { href: '#faqs', label: 'FAQs' },
-  { href: '#auth', label: 'Get Started' },
+  { href: '#auth', label: 'Book a Demo' },
 ];
 
 export default function Header({ onOpenAuth }) {
@@ -69,7 +69,7 @@ export default function Header({ onOpenAuth }) {
               className="btn btn-outline nav-cta"
               onClick={onOpenAuth}
             >
-              Login / Signup
+              Book a Demo
             </button>
           )}
           <button
@@ -122,7 +122,7 @@ export default function Header({ onOpenAuth }) {
                 onOpenAuth();
               }}
             >
-              Login / Signup
+              Book a Demo
             </button>
           )}
         </nav>

@@ -147,7 +147,15 @@ export default function AuthSection() {
           <p>
             If spoken instructions are easy to miss, Rehear helps make them easier to capture, understand, and revisit in any classroom.
           </p>
-          <p className="small-note" style={{ marginTop: '1rem', fontStyle: 'italic' }}>
+          <div className="hero-actions" style={{ marginTop: '2rem', marginBottom: '1.5rem', justifyContent: 'flex-start' }}>
+            <button className="btn btn-primary" onClick={() => setTab('signup')}>
+              Book a Demo
+            </button>
+            <button className="btn btn-secondary" onClick={() => setTab('signup')}>
+              Join the Pilot
+            </button>
+          </div>
+          <p className="small-note" style={{ fontStyle: 'italic' }}>
             Rehear is a learning support tool designed to improve access to spoken instruction. It does not diagnose or treat APD and should not replace professional medical assessment.
           </p>
         </div>
