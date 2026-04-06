@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import HearingHeroVisual from './graphics/HearingHeroVisual.jsx';
 import SoundJourneyGraphic from './graphics/SoundJourneyGraphic.jsx';
 
@@ -27,9 +28,9 @@ export default function Hero() {
             Catch the instructions you missed. Rehear turns spoken teaching into clear, replayable guidance. Perfect for students who need to capture, clarify, and revisit spoken instructions with less stress and more clarity.
           </p>
           <div className="hero-actions">
-            <a href="#auth" className="btn btn-primary">
+            <Link to="/signup" className="btn btn-primary">
               Request Early Access
-            </a>
+            </Link>
             <a href="#how-it-works" className="btn btn-secondary">
               See How It Works
             </a>
@@ -65,9 +66,9 @@ export default function Hero() {
                 </li>
               ))}
             </ul>
-            <button type="button" className="btn btn-primary full">
+            <Link to="/signup" className="btn btn-primary full">
               Start listening
-            </button>
+            </Link>
           </aside>
         </div>
       </div>

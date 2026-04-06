@@ -1,17 +1,19 @@
 import { useEffect, useState } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext.jsx';
 import logo from '../assets/APD_LOGO-.png';
 
 const NAV = [
-  { href: '#features', label: 'Features' },
-  { href: '#how-it-works', label: 'How It Works' },
-  { href: '#faqs', label: 'FAQs' },
-  { href: '#auth', label: 'Book a Demo' },
+  { href: '/#features', label: 'Features' },
+  { href: '/#how-it-works', label: 'How It Works' },
+  { href: '/#faqs', label: 'FAQs' },
 ];
 
 export default function Header({ onOpenAuth }) {
   const { user, logout, ready } = useAuth();
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -32,20 +34,29 @@ export default function Header({ onOpenAuth }) {
   const handleLogout = () => {
     logout();
     setMenuOpen(false);
+    navigate('/');
+  };
+
+  const handleNavClick = (href) => {
+    setMenuOpen(false);
+    if (href.startsWith('/#') && location.pathname === '/') {
+      const id = href.split('#')[1];
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
     <header className="site-header">
       <div className="container nav-wrap">
-        <a href="#" className="brand" aria-label="Rehear home">
+        <Link to="/" className="brand" aria-label="Rehear home" onClick={() => setMenuOpen(false)}>
           <img src={logo} alt="Rehear" className="nav-logo" />
-        </a>
+        </Link>
 
         <nav className="nav-links" aria-label="Primary">
           {NAV.map(({ href, label }) => (
-            <a key={href} href={href}>
+            <Link key={href} to={href} onClick={() => handleNavClick(href)}>
               {label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -64,13 +75,18 @@ export default function Header({ onOpenAuth }) {
               </button>
             </>
           ) : (
-            <button
-              type="button"
-              className="btn btn-outline nav-cta"
-              onClick={onOpenAuth}
-            >
-              Book a Demo
-            </button>
+            <div style={{ display: 'flex', gap: '0.75rem' }}>
+              <Link to="/login" className="btn btn-ghost nav-cta" style={{ border: 'none' }}>
+                Login
+              </Link>
+              <button
+                type="button"
+                className="btn btn-primary nav-cta"
+                onClick={onOpenAuth}
+              >
+                Book a Demo
+              </button>
+            </div>
           )}
           <button
             type="button"
@@ -94,13 +110,13 @@ export default function Header({ onOpenAuth }) {
       >
         <nav className="mobile-nav-inner" aria-label="Mobile">
           {NAV.map(({ href, label }) => (
-            <a
+            <Link
               key={href}
-              href={href}
-              onClick={() => setMenuOpen(false)}
+              to={href}
+              onClick={() => handleNavClick(href)}
             >
               {label}
-            </a>
+            </Link>
           ))}
           {ready && user ? (
             <>
@@ -114,16 +130,25 @@ export default function Header({ onOpenAuth }) {
               </button>
             </>
           ) : (
-            <button
-              type="button"
-              className="btn btn-primary full mobile-auth"
-              onClick={() => {
-                setMenuOpen(false);
-                onOpenAuth();
-              }}
-            >
-              Book a Demo
-            </button>
+            <>
+              <Link
+                to="/login"
+                className="btn btn-outline full mobile-auth"
+                onClick={() => setMenuOpen(false)}
+              >
+                Login
+              </Link>
+              <button
+                type="button"
+                className="btn btn-primary full mobile-auth"
+                onClick={() => {
+                  setMenuOpen(false);
+                  onOpenAuth();
+                }}
+              >
+                Book a Demo
+              </button>
+            </>
           )}
         </nav>
       </div>
