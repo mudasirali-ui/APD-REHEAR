@@ -3,9 +3,9 @@ import HearingHeroVisual from './graphics/HearingHeroVisual.jsx';
 import SoundJourneyGraphic from './graphics/SoundJourneyGraphic.jsx';
 
 const STATS = [
-  { value: 'Focus', label: 'On instructions' },
-  { value: 'Chunk', label: 'Complex speech' },
-  { value: 'Replay', label: 'Anytime' },
+  'Focus on key context instructions',
+  'Break spoken information into smaller parts',
+  'Replay directions anytime',
 ];
 
 const SESSIONS = [
@@ -20,12 +20,12 @@ export default function Hero() {
       <div className="hero-bg" aria-hidden="true" />
       <div className="container hero-grid">
         <div className="hero-content">
-          <p className="eyebrow">AI support for auditory processing</p>
+          <p className="eyebrow">AI assistive technology for auditory processing disorder (APD)</p>
           <h1 id="hero-heading">
-            Level up your hearing with <span className="gradient-text">Rehear</span>
+            Make spoken instructions easier to understand with assistive technology for  <span className="gradient-text">APD</span>
           </h1>
           <p className="hero-text">
-            Catch the instructions you missed. Rehear turns spoken teaching into clear, replayable guidance. Perfect for students who need to capture, clarify, and revisit spoken instructions with less stress and more clarity.
+            Rehear APD is an assistive technology tool that helps students and others with auditory processing disorder (APD) to capture, clarify, and replay spoken classroom instructions. It turns verbal teaching into clear, reviewable guidance so students can better understand how to get their work completed.
           </p>
           <div className="hero-actions">
             <Link to="/signup" className="btn btn-primary">
@@ -36,13 +36,12 @@ export default function Hero() {
             </a>
           </div>
           <p className="small-note" style={{ marginTop: '1rem', fontWeight: 500 }}>
-            Built to support students with auditory processing challenges, including APD.
+            Built as assistive technology for students with auditory processing disorder (APD) and other auditory processing challenges.
           </p>
           <div className="hero-stats" role="list">
-            {STATS.map(({ value, label }) => (
-              <div key={label} className="stat" role="listitem">
-                <strong>{value}</strong>
-                <span>{label}</span>
+            {STATS.map((tag) => (
+              <div key={tag} className="stat" role="listitem">
+                <span>{tag}</span>
               </div>
             ))}
           </div>

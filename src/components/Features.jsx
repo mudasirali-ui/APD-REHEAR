@@ -1,7 +1,7 @@
 const FEATURES = [
   {
-    title: 'Instruction-first',
-    description: 'Pulls out the critical teacher directions from the rest of the conversation so you know what to do.',
+    title: 'Instruction led assistive support',
+    description: 'Rehear identifies the critical teacher directions so students with APD can focus on what they need to do next.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path
@@ -20,8 +20,8 @@ const FEATURES = [
     ),
   },
   {
-    title: 'Replayable',
-    description: 'Listen again to important parts at your own pace without searching through an entire transcript.',
+    title: 'Replayable access',
+    description: 'Students can listen as much as they need to important instructions at their own pace.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <rect
@@ -61,8 +61,8 @@ const FEATURES = [
     ),
   },
   {
-    title: 'Less Overload',
-    description: 'Breaks lengthy spoken information into manageable pieces for easier recall and better understanding.',
+    title: 'Reduced processing overload',
+    description: 'Rehear breaks spoken information into manageable bits to support comprehension, memory, and aid in work completion.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path
@@ -89,10 +89,10 @@ export default function Features() {
     <section className="features section-pad" id="features">
       <div className="container">
         <div className="section-head">
-          <p className="eyebrow subtle">More than transcription</p>
-          <h2>More useful than a full transcript</h2>
+          <p className="eyebrow subtle">More than transcription. This is assistive support for spoken instruction</p>
+          <h2>More useful than a full transcript for students with APD</h2>
           <p className="section-text">
-            A full lesson transcript can still be overwhelming. Rehear is designed to identify the parts students need to act on, including what to do, in what order, and by when.
+            A full lesson transcript can still be overwhelming for students with auditory processing disorder or other processing disorders. Rehear works as assistive technology by identifying the parts of speech students need to act on, guide what to do, in what order, so that spoken instruction becomes more usable, not just more documented.
           </p>
         </div>
         <div className="feature-grid">

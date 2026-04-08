@@ -3,7 +3,7 @@ import { useId, useState } from 'react';
 const FAQS = [
   {
     q: 'What is Rehear?',
-    a: 'Rehear helps you work with what you hear: instructions and chunks of information you can replay, clarify, and use again. It is built for anyone who benefits from rehearing content clearly including people with auditory processing or hearing challenges.',
+    a: 'Rehear APD is an assistive technology tool for spoken instruction. It helps students capture, process, replay, and clarify directions they hear in class. It is built for students with auditory processing disorder, auditory processing challenges, hearing-related access needs, and anyone who benefits from rehearing spoken information more clearly.',
   },
   {
     q: 'How is Rehear different from speech or presentation apps?',
@@ -15,7 +15,7 @@ const FAQS = [
   },
   {
     q: 'Does Rehear replace medical care, audiologists, or hearing aids?',
-    a: 'No. Rehear is an educational support tool designed to help capture and revisit spoken instructions. It does not diagnose or treat APD, and it is not a substitute for formal accommodations, medical care, or an audiologist.',
+    a: 'No. Rehear is an assistive learning and accessibility tool designed to improve access to spoken instruction for students with auditory processing disorder (APD) and related auditory processing challenges. It does not diagnose, treat, or replace professional medical, educational, or audiological assessment in any way. Seek your audiologist and treating doctor for clarity about auditory processing disorder if you think it might affect you or someone you know.',
   },
   {
     q: 'Is my account data secure?',

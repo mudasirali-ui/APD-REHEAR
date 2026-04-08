@@ -2,17 +2,17 @@ const STEPS = [
   {
     n: '1',
     title: 'Capture',
-    text: 'Rehear listens to teacher or lecturer instructions during class.',
+    text: 'Rehear transcribes spoken teacher or lecturer instructions so students do not have to rely on their own processing in real time.',
   },
   {
     n: '2',
     title: 'Decode',
-    text: 'Advanced AI transcribes and highlights the crucial instructional chunks.',
+    text: 'AI transcribes spoken instruction and highlights the key directions, helping students with APD separate essential steps from surrounding classroom talk.',
   },
   {
     n: '3',
     title: 'Rehear',
-    text: 'Revisit the parts that matter most, reducing confusion and stress.',
+    text: 'Students can replay the most important instructions as often as needed, reducing confusion and improving understanding, recall, and task completion and building more confidence in the learner.',
   },
 ];
 
@@ -21,10 +21,10 @@ export default function HowItWorks() {
     <section className="how-it-works section-pad" id="how-it-works">
       <div className="container">
         <div className="section-head">
-          <p className="eyebrow subtle">How it works</p>
-          <h2>From spoken lesson to usable next steps</h2>
+          <p className="eyebrow subtle">How this assistive technology works</p>
+          <h2>From spoken classroom instruction to accessible, usable next steps</h2>
           <p className="section-text narrow">
-            Listen, decode, and rehear the instructions that matter in the classroom.
+            Rehear hears spoken classroom instructions, identifies the most important instructional content, and lets students replay it for better understanding.
           </p>
         </div>
         <div className="steps">

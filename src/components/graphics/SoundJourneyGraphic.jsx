@@ -1,15 +1,15 @@
 /**
- * Infographic: sound in → ear → processing squiggle → out → understood.
+ * Infographic: spoken instruction in -> key directions stored -> replay and review -> clearer understanding.
  */
 export default function SoundJourneyGraphic() {
   return (
     <div
       className="sound-journey"
       role="region"
-      aria-label="Diagram: sound enters the ear, swirls in processing, travels outward, and is heard and understood."
+      aria-label="Diagram: spoken instruction in, key directions stored, replay and review, and clearer understanding."
     >
       <p className="sound-journey__title">
-        Sound in → your ear → making sense → sound out → understood
+        Spoken instruction in → key directions stored → replay and review → get clearer understanding
       </p>
       <div className="sound-journey__frame">
         <svg
@@ -189,11 +189,11 @@ export default function SoundJourneyGraphic() {
           </g>
         </svg>
         <div className="sound-journey__labels" aria-hidden="true">
-          <span>Sound in</span>
-          <span>Into the ear</span>
-          <span>Making sense</span>
-          <span>Sound out</span>
-          <span>Understood</span>
+          <span>Spoken instruction in</span>
+          <span>Key directions stored</span>
+          <span>Replay and review</span>
+          <span>Clearer understanding</span>
+          <span>Instruction understood</span>
         </div>
       </div>
     </div>

@@ -5,15 +5,12 @@ export default function ProblemSection() {
     <section className="section-pad problem-section" style={{ background: 'var(--sky-50)' }}>
       <div className="container" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)', gap: '4rem', alignItems: 'center' }}>
         <div className="section-head" style={{ marginBottom: 0 }}>
-          <p className="eyebrow subtle">The Challenge</p>
+          <p className="eyebrow subtle">The accessibility challenge in spoken instruction</p>
           <h2 style={{ fontSize: '2.5rem', lineHeight: '1.2', marginBottom: '1.5rem' }}>
-            When spoken instructions move too fast, learning breaks down.
+            When spoken instructions are fast, in noisy environments, or complex, students with APD can lose focus and struggle to access key instructions.
           </h2>
-          <p className="section-text" style={{ fontSize: '1.15rem', color: 'var(--slate-700)', marginBottom: '1.5rem', textAlign: 'left' }}>
-            For many students, the hardest part of class is not the work itself. It is catching and holding onto the spoken instructions that explain what the work actually is.
-          </p>
           <p className="section-text" style={{ fontSize: '1.15rem', color: 'var(--slate-700)', textAlign: 'left' }}>
-            In noisy classrooms, fast lectures, multi-step teacher directions, and verbal assignment changes, important details can be missed. Rehear APD is built to help students revisit those moments with less stress and more clarity.
+            For many students with auditory processing disorder, the hardest part of class is not the assignment itself, it is processing the spoken directions that explain the assignment. In noisy classrooms, or fast lectures, rapid or multi step instructions, and verbal changes to tasks, important details can be missed. Rehear APD is designed as assistive technology to help students revisit and understand those instructions with less stress and more confidence.
           </p>
         </div>
         <div className="problem-visual">
