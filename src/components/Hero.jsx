@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom';
-import HearingHeroVisual from './graphics/HearingHeroVisual.jsx';
-import SoundJourneyGraphic from './graphics/SoundJourneyGraphic.jsx';
 
 const STATS = [
   'Focus on key context instructions',
@@ -35,7 +33,7 @@ export default function Hero() {
               See How It Works
             </a>
           </div>
-          <p className="small-note" style={{ marginTop: '1rem', fontWeight: 500 }}>
+          <p className="small-note">
             Built as assistive technology for students with auditory processing disorder (APD) and other auditory processing challenges.
           </p>
           <div className="hero-stats" role="list">
@@ -46,33 +44,6 @@ export default function Hero() {
             ))}
           </div>
         </div>
-
-        <div className="hero-visual-column">
-          <HearingHeroVisual />
-          <aside
-            className="hero-card hero-card--overlay"
-            aria-label="Listening session"
-          >
-            <div className="hero-card-head">
-              <h3>Extracted Instructions</h3>
-              <span className="badge">Actionable</span>
-            </div>
-            <ul className="session-list">
-              {SESSIONS.map((line) => (
-                <li key={line}>
-                  <span className="dot" aria-hidden="true" />
-                  {line}
-                </li>
-              ))}
-            </ul>
-            <Link to="/signup" className="btn btn-primary full">
-              Start listening
-            </Link>
-          </aside>
-        </div>
-      </div>
-      <div className="container hero-journey">
-        <SoundJourneyGraphic />
       </div>
     </section>
   );

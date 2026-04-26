@@ -7,6 +7,7 @@ const NAV = [
   { href: '/#features', label: 'Features' },
   { href: '/#how-it-works', label: 'How It Works' },
   { href: '/#faqs', label: 'FAQs' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export default function Header({ onOpenAuth }) {
