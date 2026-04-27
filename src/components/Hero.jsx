@@ -26,7 +26,7 @@ export default function Hero() {
             Rehear APD is an assistive technology tool that helps students and others with auditory processing disorder (APD) to capture, clarify, and replay spoken classroom instructions. It turns verbal teaching into clear, reviewable guidance so students can better understand how to get their work completed.
           </p>
           <div className="hero-actions">
-            <Link to="/signup" className="btn btn-primary">
+            <Link to="/contact" className="btn btn-primary">
               Request Early Access
             </Link>
             <a href="#how-it-works" className="btn btn-secondary">

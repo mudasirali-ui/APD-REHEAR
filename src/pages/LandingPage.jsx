@@ -26,7 +26,7 @@ export default function LandingPage() {
               If spoken instructions are difficult to process or easy to miss, Rehear provides assistive support that helps students capture, understand, and revisit classroom directions. Join early access to explore a better accessibility tool for spoken instruction.
             </p>
             <div className="hero-actions" style={{ marginTop: '2rem', justifyContent: 'center' }}>
-              <Link to="/signup" className="btn btn-primary">
+              <Link to="/contact" className="btn btn-primary">
                 Request Early Access
               </Link>
             </div>

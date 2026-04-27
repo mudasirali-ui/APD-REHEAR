@@ -6,6 +6,7 @@ export default function ContactPage() {
     firstName: '',
     lastName: '',
     email: '',
+    phone: '',
     subject: '',
     message: ''
   });
@@ -27,18 +28,19 @@ export default function ContactPage() {
     try {
       const result = await submitContact(formData);
 
-      if (result.error) {
-        setStatus('error');
-      } else {
+      if (result.success) {
         setStatus('success');
         // Clear form after success
         setFormData({
           firstName: '',
           lastName: '',
           email: '',
+          phone: '',
           subject: '',
           message: ''
         });
+      } else {
+        setStatus('error');
       }
     } catch (err) {
       console.error('Contact error:', err);
@@ -143,6 +145,18 @@ export default function ContactPage() {
                       onChange={handleChange}
                       placeholder="jane@example.com"
                       required 
+                    />
+                  </div>
+                  
+                  <div className="input-group">
+                    <label htmlFor="phone">Phone Number (Optional)</label>
+                    <input 
+                      type="tel" 
+                      id="phone" 
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="(555) 123-4567"
                     />
                   </div>
                   

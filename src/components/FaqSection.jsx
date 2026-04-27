@@ -18,12 +18,8 @@ const FAQS = [
     a: 'No. Rehear is an assistive learning and accessibility tool designed to improve access to spoken instruction for students with auditory processing disorder (APD) and related auditory processing challenges. It does not diagnose, treat, or replace professional medical, educational, or audiological assessment in any way. Seek your audiologist and treating doctor for clarity about auditory processing disorder if you think it might affect you or someone you know.',
   },
   {
-    q: 'Is my account data secure?',
-    a: 'Yes. We use industry-standard encryption and secure authentication to ensure your login details, saved instructions, and listening sessions are fully protected and private.',
-  },
-  {
     q: 'How do I get started?',
-    a: 'Use Login / Signup below to create a free account. Then explore features, FAQs, and the “how sound moves” diagram at the top of the page—it mirrors the same in → process → out → understood story.',
+    a: 'Use the Contact form to get in touch. Then explore features, FAQs, and the “how sound moves” diagram at the top of the page—it mirrors the same in → process → out → understood story.',
   },
 ];
 

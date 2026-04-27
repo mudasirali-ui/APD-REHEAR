@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext.jsx';
 import logo from '../assets/APD_LOGO-.png';
 
 const NAV = [
@@ -11,7 +10,6 @@ const NAV = [
 ];
 
 export default function Header({ onOpenAuth }) {
-  const { user, logout, ready } = useAuth();
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -31,12 +29,6 @@ export default function Header({ onOpenAuth }) {
       document.body.style.overflow = '';
     };
   }, [menuOpen]);
-
-  const handleLogout = () => {
-    logout();
-    setMenuOpen(false);
-    navigate('/');
-  };
 
   const handleNavClick = (href) => {
     setMenuOpen(false);
@@ -62,33 +54,15 @@ export default function Header({ onOpenAuth }) {
         </nav>
 
         <div className="nav-actions">
-          {ready && user ? (
-            <>
-              <span className="user-chip nav-cta" title={user.email}>
-                {(user.name || user.email).split(' ')[0]}
-              </span>
-              <button
-                type="button"
-                className="btn btn-outline nav-cta"
-                onClick={handleLogout}
-              >
-                Log out
-              </button>
-            </>
-          ) : (
-            <div style={{ display: 'flex', gap: '0.75rem' }}>
-              <Link to="/login" className="btn btn-ghost nav-cta" style={{ border: 'none' }}>
-                Login
-              </Link>
-              <button
-                type="button"
-                className="btn btn-primary nav-cta"
-                onClick={onOpenAuth}
-              >
-                Book a Demo
-              </button>
-            </div>
-          )}
+          <div style={{ display: 'flex', gap: '0.75rem' }}>
+            <button
+              type="button"
+              className="btn btn-primary nav-cta"
+              onClick={onOpenAuth}
+            >
+              Book a Demo
+            </button>
+          </div>
           <button
             type="button"
             className={`menu-toggle ${menuOpen ? 'open' : ''}`}
@@ -119,38 +93,18 @@ export default function Header({ onOpenAuth }) {
               {label}
             </Link>
           ))}
-          {ready && user ? (
-            <>
-              <p className="mobile-user">{user.name}</p>
-              <button
-                type="button"
-                className="btn btn-outline full mobile-auth"
-                onClick={handleLogout}
-              >
-                Log out
-              </button>
-            </>
-          ) : (
-            <>
-              <Link
-                to="/login"
-                className="btn btn-outline full mobile-auth"
-                onClick={() => setMenuOpen(false)}
-              >
-                Login
-              </Link>
-              <button
-                type="button"
-                className="btn btn-primary full mobile-auth"
-                onClick={() => {
-                  setMenuOpen(false);
-                  onOpenAuth();
-                }}
-              >
-                Book a Demo
-              </button>
-            </>
-          )}
+          <>
+            <button
+              type="button"
+              className="btn btn-primary full mobile-auth"
+              onClick={() => {
+                setMenuOpen(false);
+                onOpenAuth();
+              }}
+            >
+              Book a Demo
+            </button>
+          </>
         </nav>
       </div>
       {menuOpen && (

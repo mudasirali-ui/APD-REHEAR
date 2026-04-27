@@ -1,64 +1,19 @@
-// ============================================
-// REHEAR — Master Backend API Connection
-// ============================================
-
 const BASE = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
-const PROJECT_ID = import.meta.env.VITE_PROJECT_ID || 'rehear';
-
-// Standard headers for every request
-const headers = {
-  'Content-Type': 'application/json',
-  'x-project-id': PROJECT_ID
-};
-
-// ─────────────────────────────────────────
-// AUTH
-// ─────────────────────────────────────────
-
-// Signup
-export const signup = async ({ name, email, password }) => {
-  const res = await fetch(`${BASE}/api/auth/signup`, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify({ name, email, password })
-  });
-  return res.json();
-};
-
-// Login
-export const login = async ({ email, password }) => {
-  const res = await fetch(`${BASE}/api/auth/login`, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify({ email, password })
-  });
-  return res.json();
-};
-
-// Logout
-export const logout = async (token) => {
-  const res = await fetch(`${BASE}/api/auth/logout`, {
-    method: 'POST',
-    headers: { ...headers, Authorization: `Bearer ${token}` }
-  });
-  return res.json();
-};
-
-// ─────────────────────────────────────────
-// CONTACT FORM
-// ─────────────────────────────────────────
+const PROJECT_ID = import.meta.env.VITE_PROJECT_ID || 'apd-rehear';
 
 export const submitContact = async (formData) => {
+  const data = new FormData();
+  data.append('first_name', formData.firstName || formData.first_name || '');
+  data.append('last_name', formData.lastName || formData.last_name || '');
+  data.append('email', formData.email);
+  data.append('phone', formData.phone || '');
+  data.append('subject', formData.subject || '');
+  data.append('message', formData.message || '');
+
   const res = await fetch(`${BASE}/api/contact/submit`, {
     method: 'POST',
-    headers,
-    body: JSON.stringify({
-      first_name: formData.firstName,
-      last_name: formData.lastName,
-      email: formData.email,
-      subject: formData.subject || '',
-      message: formData.message
-    })
+    headers: { 'x-project-id': PROJECT_ID },
+    body: data
   });
   return res.json();
 };
